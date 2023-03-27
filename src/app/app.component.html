@@ -2,19 +2,10 @@
 <div id="two-way-1">
   <app-sizer [(size)]="fontSizePx"></app-sizer>
   <div [style.font-size.px]="fontSizePx">Resizable Text</div>
-  <label>FontSize (px): <input [(ngModel)]="fontSizePx"></label>
+  <label>FontSize (px): <input [(ngModel)]="fontSizePx" /></label>
 </div>
-<br>
+<br />
 <div id="two-way-2">
   <h2>De-sugared two-way binding</h2>
-  <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+  <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx = $event"></app-sizer>
 </div>
-
-
-
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
